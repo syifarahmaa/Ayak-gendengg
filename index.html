@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Klinik Sehat Bersama</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="#e91e8c"/>
+            <rect x="17" y="10" width="6" height="20" rx="3" fill="white"/>
+            <rect x="10" y="17" width="20" height="6" rx="3" fill="white"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Klinik Sehat</span>
+          <span class="logo-sub">Bersama</span>
+        </div>
+      </div>
+      <p class="header-tagline">Kesehatan Anda, Prioritas Kami</p>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="#" class="nav-link active" onclick="showMenu('home', this)">HOME</a></li>
+      <li><a href="#" class="nav-link" onclick="showMenu('layanan', this)">LAYANAN</a></li>
+      <li><a href="#" class="nav-link" onclick="showMenu('dokter', this)">DOKTER</a></li>
+      <li><a href="#" class="nav-link" onclick="showMenu('about', this)">ABOUT</a></li>
+      <li><a href="#" class="nav-link" onclick="showMenu('contact', this)">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- SLOGAN / ANIMASI -->
+  <div class="slogan-bar">
+    <div class="slogan-track">
+      <span>🌸 Pelayanan Terpercaya &nbsp;&nbsp;✦&nbsp;&nbsp; Dokter Berpengalaman &nbsp;&nbsp;✦&nbsp;&nbsp; Kesehatan Optimal &nbsp;&nbsp;✦&nbsp;&nbsp; Buka 7 Hari Seminggu &nbsp;&nbsp;✦&nbsp;&nbsp; Konsultasi Ramah &nbsp;&nbsp;✦&nbsp;&nbsp; 🌸 Pelayanan Terpercaya &nbsp;&nbsp;✦&nbsp;&nbsp; Dokter Berpengalaman &nbsp;&nbsp;✦&nbsp;&nbsp; Kesehatan Optimal &nbsp;&nbsp;✦&nbsp;&nbsp; Buka 7 Hari Seminggu &nbsp;&nbsp;✦&nbsp;&nbsp; Konsultasi Ramah &nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-wrapper">
+
+    <!-- SIDEBAR KIRI -->
+    <aside class="sidebar-left">
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">📋 Menu Cepat</h3>
+        <ul class="sidebar-menu">
+          <li><a href="#" onclick="showMenu('home', null)">🏠 Beranda</a></li>
+          <li><a href="#" onclick="showMenu('layanan', null)">💊 Layanan</a></li>
+          <li><a href="#" onclick="showMenu('dokter', null)">👨‍⚕️ Tim Dokter</a></li>
+          <li><a href="#" onclick="showMenu('about', null)">ℹ️ Tentang Kami</a></li>
+          <li><a href="#" onclick="showMenu('contact', null)">📞 Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card info-card">
+        <h3 class="sidebar-title">⏰ Jam Buka</h3>
+        <div class="jam-info">
+          <div class="jam-row"><span>Senin–Jumat</span><span>07.00–21.00</span></div>
+          <div class="jam-row"><span>Sabtu</span><span>08.00–18.00</span></div>
+          <div class="jam-row weekend"><span>Minggu</span><span>09.00–15.00</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <main class="content-area">
+
+      <!-- HOME -->
+      <section id="home" class="page-section active">
+        <div class="hero-banner">
+          <div class="hero-text">
+            <h1 class="hero-title">Selamat Datang di <br/><em>Klinik Sehat Bersama</em></h1>
+            <p class="hero-desc">Kami hadir untuk memberikan pelayanan kesehatan terbaik dengan tenaga medis profesional dan peralatan modern. Kesehatan Anda adalah kebahagiaan kami.</p>
+            <button class="btn-primary" onclick="showMenu('layanan', null)">Lihat Layanan Kami →</button>
+          </div>
+          <div class="hero-img">
+            <div class="hero-circle">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="90" fill="#fce4f0"/>
+                <text x="50%" y="48%" dominant-baseline="middle" text-anchor="middle" font-size="70">🏥</text>
+                <text x="50%" y="68%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#c0488a" font-family="DM Sans">Klinik Terpercaya</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-num">2.500+</div><div class="stat-label">Pasien Dilayani</div></div>
+          <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Dokter Spesialis</div></div>
+          <div class="stat-card"><div class="stat-num">15 Thn</div><div class="stat-label">Pengalaman</div></div>
+          <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">Siap Melayani</div></div>
+        </div>
+
+        <h2 class="section-heading">Layanan Unggulan</h2>
+        <div class="product-list">
+          <div class="product-item">
+            <div class="product-img emoji-img">🩺</div>
+            <div class="product-info">
+              <h3><a href="#">Konsultasi Umum</a></h3>
+              <p>Pemeriksaan kesehatan umum dengan dokter berpengalaman. Meliputi diagnosa, pengobatan, dan edukasi kesehatan untuk semua usia.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">💉</div>
+            <div class="product-info">
+              <h3><a href="#">Vaksinasi & Imunisasi</a></h3>
+              <p>Program vaksinasi lengkap untuk bayi, anak, dan dewasa. Tersedia vaksin flu, hepatitis, COVID-19, dan imunisasi rutin lainnya.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">🧪</div>
+            <div class="product-info">
+              <h3><a href="#">Laboratorium Klinik</a></h3>
+              <p>Pemeriksaan laboratorium lengkap dengan teknologi modern. Hasil akurat dan cepat untuk mendukung diagnosis yang tepat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAYANAN -->
+      <section id="layanan" class="page-section">
+        <div class="page-header">
+          <h2>Layanan Kesehatan Kami</h2>
+          <p>Kami menyediakan berbagai layanan kesehatan komprehensif untuk kebutuhan Anda dan keluarga</p>
+        </div>
+        <div class="product-list">
+          <div class="product-item">
+            <div class="product-img emoji-img">🩺</div>
+            <div class="product-info">
+              <h3><a href="#">Konsultasi Dokter Umum</a></h3>
+              <p>Layanan konsultasi dengan dokter umum berpengalaman untuk pemeriksaan awal, diagnosa penyakit ringan hingga sedang, serta pemberian resep obat yang tepat dan terpercaya.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">🦷</div>
+            <div class="product-info">
+              <h3><a href="#">Poli Gigi & Mulut</a></h3>
+              <p>Perawatan kesehatan gigi dan mulut oleh dokter gigi profesional. Meliputi tambal gigi, cabut gigi, pembersihan karang gigi, dan konsultasi ortodonti.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">👶</div>
+            <div class="product-info">
+              <h3><a href="#">Poli Anak (Pediatri)</a></h3>
+              <p>Layanan kesehatan khusus bayi dan anak-anak, meliputi pemantauan tumbuh kembang, imunisasi, konsultasi nutrisi, serta penanganan penyakit anak secara holistik.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">💉</div>
+            <div class="product-info">
+              <h3><a href="#">Vaksinasi & Imunisasi</a></h3>
+              <p>Program vaksinasi lengkap tersedia untuk semua kelompok usia. Tersedia vaksin influenza, hepatitis A & B, HPV, COVID-19 booster, dan vaksin perjalanan internasional.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">🧪</div>
+            <div class="product-info">
+              <h3><a href="#">Laboratorium Klinik</a></h3>
+              <p>Fasilitas lab modern dengan hasil pemeriksaan darah, urin, dan feses yang cepat dan akurat. Tersedia pemeriksaan kolesterol, gula darah, asam urat, dan panel lengkap.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">🏃‍♀️</div>
+            <div class="product-info">
+              <h3><a href="#">Fisioterapi & Rehabilitasi</a></h3>
+              <p>Program fisioterapi untuk pemulihan pasca operasi, cedera olahraga, nyeri punggung, dan gangguan gerak lainnya dengan metode terapi terkini dan terapis bersertifikat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOKTER -->
+      <section id="dokter" class="page-section">
+        <div class="page-header">
+          <h2>Tim Dokter Kami</h2>
+          <p>Didukung oleh tenaga medis profesional dan berpengalaman di bidangnya</p>
+        </div>
+        <div class="doctor-grid">
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-circle female">👩‍⚕️</div>
+            </div>
+            <div class="doctor-info">
+              <h3>dr. Siti Rahma Dewi, Sp.PD</h3>
+              <span class="dokter-badge">Spesialis Penyakit Dalam</span>
+              <p>Lulusan Universitas Gadjah Mada dengan pengalaman 12 tahun di bidang penyakit dalam. Ahli dalam penanganan diabetes, hipertensi, dan gangguan metabolik.</p>
+              <div class="dokter-jadwal">
+                <strong>Jadwal Praktik:</strong> Senin, Rabu, Jumat — 08.00–14.00
+              </div>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-circle male">👨‍⚕️</div>
+            </div>
+            <div class="doctor-info">
+              <h3>dr. Budi Santoso, Sp.A</h3>
+              <span class="dokter-badge">Spesialis Anak</span>
+              <p>Dokter spesialis anak berpengalaman 9 tahun dengan keahlian khusus pada tumbuh kembang anak, neonatologi, dan penanganan penyakit infeksi pada anak-anak.</p>
+              <div class="dokter-jadwal">
+                <strong>Jadwal Praktik:</strong> Selasa, Kamis, Sabtu — 09.00–15.00
+              </div>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-circle female">👩‍⚕️</div>
+            </div>
+            <div class="doctor-info">
+              <h3>drg. Anisa Putri, Sp.KG</h3>
+              <span class="dokter-badge">Spesialis Konservasi Gigi</span>
+              <p>Dokter gigi spesialis lulusan Universitas Indonesia. Berpengalaman dalam perawatan gigi estetik, endodontik, dan prostodontik dengan pendekatan yang nyaman dan minim rasa sakit.</p>
+              <div class="dokter-jadwal">
+                <strong>Jadwal Praktik:</strong> Senin–Sabtu — 10.00–16.00
+              </div>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-circle male">👨‍⚕️</div>
+            </div>
+            <div class="doctor-info">
+              <h3>dr. Hendra Wijaya</h3>
+              <span class="dokter-badge">Dokter Umum & IGD</span>
+              <p>Dokter umum dengan spesialisasi penanganan gawat darurat dan triage. Siap memberikan pelayanan terbaik 24 jam untuk kondisi darurat medis apa pun.</p>
+              <div class="dokter-jadwal">
+                <strong>Jadwal Praktik:</strong> Setiap Hari — 24 Jam (IGD)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="page-section">
+        <div class="page-header">
+          <h2>Tentang Klinik Sehat Bersama</h2>
+          <p>Mengenal lebih dekat klinik kesehatan terpercaya kami</p>
+        </div>
+        <div class="about-layout">
+          <div class="about-img-box">
+            <div class="about-emoji-block">🏥</div>
+          </div>
+          <div class="about-text">
+            <h3>Visi & Misi Kami</h3>
+            <p><strong>Visi:</strong> Menjadi klinik kesehatan pilihan utama masyarakat yang memberikan layanan berkualitas tinggi, terjangkau, dan penuh empati.</p>
+            <p><strong>Misi:</strong></p>
+            <ul>
+              <li>Menyediakan layanan kesehatan komprehensif dan terjangkau</li>
+              <li>Meningkatkan kualitas hidup masyarakat melalui edukasi kesehatan</li>
+              <li>Mengembangkan SDM medis yang profesional dan berkomitmen</li>
+              <li>Menggunakan teknologi medis terkini untuk akurasi diagnosa</li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-list" style="margin-top:2rem;">
+          <div class="product-item">
+            <div class="product-img emoji-img">🏆</div>
+            <div class="product-info">
+              <h3><a href="#">Penghargaan & Sertifikasi</a></h3>
+              <p>Klinik Sehat Bersama telah mendapatkan akreditasi dari Kementerian Kesehatan RI dan meraih penghargaan Klinik Terbaik tingkat Kota Pekalongan selama 3 tahun berturut-turut (2022–2024).</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img emoji-img">🌱</div>
+            <div class="product-info">
+              <h3><a href="#">Komitmen Lingkungan</a></h3>
+              <p>Kami berkomitmen pada praktik medis ramah lingkungan dengan pengelolaan limbah medis yang bertanggung jawab, penggunaan energi efisien, dan program penghijauan lingkungan klinik.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="page-section">
+        <div class="page-header">
+          <h2>Hubungi Kami</h2>
+          <p>Kami siap membantu Anda — jangan ragu untuk menghubungi kami</p>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-info-box">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Alamat</strong>
+                <p>Jl. Kesehatan No. 88, Pekalongan Utara,<br/>Kota Pekalongan, Jawa Tengah 51111</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Telepon</strong>
+                <p>(0285) 123-4567<br/>WhatsApp: 0812-3456-7890</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>info@kliniksehatbersama.id<br/>admin@kliniksehatbersama.id</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">⏰</span>
+              <div>
+                <strong>Jam Operasional</strong>
+                <p>Senin–Jumat: 07.00–21.00<br/>Sabtu: 08.00–18.00 | Minggu: 09.00–15.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-box">
+            <h3>Kirim Pesan</h3>
+            <div class="form-group">
+              <label>Nama Lengkap</label>
+              <input type="text" placeholder="Masukkan nama Anda"/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="email@anda.com"/>
+            </div>
+            <div class="form-group">
+              <label>Pesan</label>
+              <textarea placeholder="Tulis pesan atau pertanyaan Anda..."></textarea>
+            </div>
+            <button class="btn-primary">Kirim Pesan 💌</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SIDEBAR KANAN -->
+    <aside class="sidebar-right">
+      <div class="sidebar-card ad-card">
+        <h3 class="sidebar-title">🌸 Promo Sehat</h3>
+        <div class="promo-item">
+          <div class="promo-emoji">💊</div>
+          <div>
+            <strong>Paket Medical Check-Up</strong>
+            <p>Mulai Rp 199.000</p>
+          </div>
+        </div>
+        <div class="promo-item">
+          <div class="promo-emoji">🦷</div>
+          <div>
+            <strong>Promo Scaling Gigi</strong>
+            <p>Diskon 30% bulan ini</p>
+          </div>
+        </div>
+        <div class="promo-item">
+          <div class="promo-emoji">💉</div>
+          <div>
+            <strong>Vaksin Flu</strong>
+            <p>Gratis konsultasi dokter</p>
+          </div>
+        </div>
+        <button class="btn-promo" onclick="showMenu('layanan', null)">Lihat Semua →</button>
+      </div>
+
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">📞 Darurat</h3>
+        <div class="emergency-box">
+          <div class="emer-num">🚑 IGD</div>
+          <div class="emer-num">(0285) 999-000</div>
+          <p style="font-size:0.78rem; color:#999; margin-top:0.5rem;">Tersedia 24 Jam</p>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">📰 Info Kesehatan</h3>
+        <ul class="info-list">
+          <li><a href="#">Tips Menjaga Imun Tubuh di Musim Hujan</a></li>
+          <li><a href="#">Pentingnya Vaksinasi untuk Anak</a></li>
+          <li><a href="#">Cara Merawat Kesehatan Gigi Sehari-hari</a></li>
+          <li><a href="#">Pola Makan Sehat untuk Diabetes</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div><!-- END MAIN WRAPPER -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 30 30" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15" cy="15" r="15" fill="#e91e8c"/>
+          <rect x="12.5" y="7" width="5" height="16" rx="2.5" fill="white"/>
+          <rect x="7" y="12.5" width="16" height="5" rx="2.5" fill="white"/>
+        </svg>
+        <span>Klinik Sehat Bersama</span>
+      </div>
+      <p class="footer-copy">© 2025 — Alya Febriana |  25.230.0115 |  2P53A</p>
+      <p class="footer-sub">Institut Widya Pratama Pekalongan — Sistem Informasi</p>
+    </div>
+  </footer>
+
+  <script>
+    function showMenu(menuId, clickedEl) {
+      // hide all sections
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      // show target
+      const target = document.getElementById(menuId);
+      if (target) target.classList.add('active');
+
+      // update active nav link
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      if (clickedEl) {
+        clickedEl.classList.add('active');
+      } else {
+        // find the matching nav link by text
+        const map = {home:'HOME',layanan:'LAYANAN',dokter:'DOKTER',about:'ABOUT',contact:'CONTACT'};
+        document.querySelectorAll('.nav-link').forEach(l => {
+          if (l.textContent.trim() === map[menuId]) l.classList.add('active');
+        });
+      }
+      return false;
+    }
+  </script>
+
+</body>
+</html>
